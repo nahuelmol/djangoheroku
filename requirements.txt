@@ -1,0 +1,8 @@
+uwsgi
+werkzeug
+
+dj-database-url==
+Django==
+psycopg2==
+pytz==
+whitenoise==
