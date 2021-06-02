@@ -11,7 +11,7 @@ SECRET_KEY = 'l9$xm5n*mvx)7n++c_3ee$-h3=ljvdweqvch_0q0kck(+9b+m+'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com','localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +39,7 @@ ROOT_URLCONF = 'djangoherokuapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -54,7 +54,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoherokuapp.wsgi.application'
 
-DATABASES['default'].update(prod_db)
+#DATABASES['default'].update(prod_db)
 
 AUTH_PASSWORD_VALIDATORS = [
     {

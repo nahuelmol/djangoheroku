@@ -1,1 +1,1 @@
-web: uwsgi uwsgi.ini
+web: waitress-serve --port=$PORT djangoherokuapp.wsgi:application

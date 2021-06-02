@@ -1,8 +1,6 @@
-uwsgi
-werkzeug
 
-dj-database-url==
-Django==
-psycopg2==
-pytz==
-whitenoise==
+dj-database-url==0.5.0
+Django==3.2
+psycopg2==2.8.6
+pytz==2020.1
+whitenoise==5.2.0
