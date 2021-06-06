@@ -6,7 +6,9 @@ import dj_database_url
 
 prod_db = dj_database_url.config(conn_max_age=500)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.join(os.path.abspath(__file__))
+
 
 SECRET_KEY = 'l9$xm5n*mvx)7n++c_3ee$-h3=ljvdweqvch_0q0kck(+9b+m+'
 
@@ -89,16 +91,17 @@ DATABASES = {
     }
 }
 
-#PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
-]
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFileStorage'
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, '../static'),
+)
 
 import django_heroku
 django_heroku.settings(locals())
