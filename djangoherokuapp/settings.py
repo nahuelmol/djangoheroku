@@ -82,13 +82,21 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 #PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
-)
+]
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFileStorage'
 
 
