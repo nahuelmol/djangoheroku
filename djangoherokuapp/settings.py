@@ -91,6 +91,8 @@ DATABASES = {
     }
 }
 
+DISABLE_COLLECTSTATIC = 1
+
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFileStorage'
