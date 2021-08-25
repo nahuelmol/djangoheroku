@@ -1,5 +1,10 @@
 <h1>djangoheroku</h1>
 
+<div>
+  <img src="https://img.shields.io/github/last-commit/nahuelmol/djangoheroku"/>
+  <img src="https://img.shields.io/github/languages/code-size/nahuelmol/djangoheroku"/>
+  <img src="https://img.shields.io/github/languages/top/nahuelmol/djangoheroku"/>
+</div>
 
 <div class="content">
 <h3>i specified</h3>
